@@ -1,7 +1,9 @@
+import {Link} from "react-router-dom";
+
 const PostComponent = ({post}) => {
     return (
         <div>
-            {post.id}: {post.title}
+            <Link to={`${post.id}`} state={{id:post.id}}>{post.id}: {post.title}</Link>
         </div>
     );
 };

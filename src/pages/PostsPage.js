@@ -1,4 +1,4 @@
-import {useLoaderData} from "react-router-dom";
+import {Outlet, useLoaderData} from "react-router-dom";
 
 import {PostComponent} from "../components";
 
@@ -7,6 +7,9 @@ const PostsPage = () => {
 
     return (
         <div>
+            <hr/>
+            <Outlet/>
+            <hr/>
             {posts.map(post => <PostComponent key={post.id} post={post}/>)}
         </div>
     );

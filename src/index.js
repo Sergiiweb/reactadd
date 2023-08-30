@@ -4,7 +4,7 @@ import reportWebVitals from './reportWebVitals';
 
 import './index.css';
 import App from './App';
-import {CommentsPage, PostsOfUserPage, PostsPage, UsersPage} from "./pages";
+import {CommentsOfPost, CommentsPage, PostsOfUserPage, PostsPage, UsersPage} from "./pages";
 import {getAllComments, getAllPosts, getAllUsers, getPostsOfCurrentUser} from "./services";
 
 let router = createBrowserRouter([
@@ -20,7 +20,13 @@ let router = createBrowserRouter([
             {
                 path: 'posts',
                 element: <PostsPage/>,
-                loader: getAllPosts
+                loader: getAllPosts,
+                children: [
+                    {
+                        path: ':id',
+                        element: <CommentsOfPost/>
+                    }
+                ]
             },
             {
                 path: 'comments',
