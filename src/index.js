@@ -4,9 +4,36 @@ import reportWebVitals from './reportWebVitals';
 
 import './index.css';
 import App from './App';
+import {CommentsPage, PostsOfUserPage, PostsPage, UsersPage} from "./pages";
+import {getAllComments, getAllPosts, getAllUsers, getPostsOfCurrentUser} from "./services";
 
 let router = createBrowserRouter([
-    {path:'', element: <App/>}
+    {
+        path: '',
+        element: <App/>,
+        children: [
+            {
+                path: 'users',
+                element: <UsersPage/>,
+                loader: getAllUsers
+            },
+            {
+                path: 'posts',
+                element: <PostsPage/>,
+                loader: getAllPosts
+            },
+            {
+                path: 'comments',
+                element: <CommentsPage/>,
+                loader: getAllComments
+            },
+            {
+                path: 'users/:id',
+                element: <PostsOfUserPage/>,
+                loader: getPostsOfCurrentUser
+            }
+        ]
+    }
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

@@ -1,4 +1,4 @@
-import {Link} from "react-router-dom";
+import {Link, Outlet} from "react-router-dom";
 
 import './App.css';
 
@@ -10,6 +10,7 @@ function App() {
             <li><Link to={'posts'}>posts</Link></li>
             <li><Link to={'comments'}>comments</Link></li>
         </ul>
+        <Outlet/>
     </div>
   );
 }
