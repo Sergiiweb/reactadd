@@ -1,18 +1,12 @@
-import {Link, Outlet} from "react-router-dom";
-
 import './App.css';
+import {CarsPage} from "./pages";
 
 function App() {
-  return (
-    <div>
-        <ul className={'nav'}>
-            <li><Link to={'users'}>users</Link></li>
-            <li><Link to={'posts'}>posts</Link></li>
-            <li><Link to={'comments'}>comments</Link></li>
-        </ul>
-        <Outlet/>
-    </div>
-  );
+    return (
+        <div>
+            <CarsPage/>
+        </div>
+    );
 }
 
 export default App;

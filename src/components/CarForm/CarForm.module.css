@@ -1,0 +1,19 @@
+.CarForm {
+    border-radius: 10px;
+    border: 2px solid gray;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 5px 20px;
+}
+
+.CarForm input {
+    margin: 5px 20px;
+}
+
+.CarForm button {
+    margin: 5px 50px;
+    width: 100px;
+    font-size: 20px;
+}

@@ -1,4 +1,3 @@
-export * from "./CommentsComponent";
-export * from "./UserComponent";
-export * from "./PostComponent";
-export * from "./PostsOfCurrentUserComponent";
+export * from "./Cars/Cars";
+export * from "./Car/Car";
+export * from "./CarForm/CarForm";
