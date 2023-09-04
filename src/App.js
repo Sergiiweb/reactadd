@@ -1,17 +1,23 @@
-import {Link} from "react-router-dom";
-
+import {useReducer} from "react";
 import './App.css';
 
+const initialState = {
+
+}
+const reducer = (state, action) => {
+    switch (action.type) {
+
+    }
+}
+
 function App() {
-  return (
-    <div>
-        <ul className={'nav'}>
-            <li><Link to={'users'}>users</Link></li>
-            <li><Link to={'posts'}>posts</Link></li>
-            <li><Link to={'comments'}>comments</Link></li>
-        </ul>
-    </div>
-  );
+    useReducer(reducer, initialState);
+
+    return (
+        <div>
+            App
+        </div>
+    );
 }
 
 export default App;
