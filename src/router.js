@@ -1,5 +1,7 @@
 import {createBrowserRouter, Navigate} from "react-router-dom";
+
 import {MainLayout} from "./layouts";
+import {AuthRequired} from "./hoc";
 import {CarsPage, LoginPage} from "./pages";
 
 const router = createBrowserRouter([
@@ -15,13 +17,13 @@ const router = createBrowserRouter([
                 path: 'cars',
                 element: <CarsPage/>
             },
-            {
-                path: 'login',
-                element: <LoginPage/>
-            }
         ]
+    },
+    {
+        path: 'login',
+        element: <LoginPage/>
     }
-]);
+])
 
 export {
     router

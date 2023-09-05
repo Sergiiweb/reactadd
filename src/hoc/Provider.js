@@ -1,13 +1,13 @@
 import {createContext, useReducer} from "react";
-import {carInitialState, carReducer} from "../reducers";
+
+import {authInitialState, authReducer, carInitialState, carReducer} from "../reducers";
 
 const StateContext = createContext(null);
-
 const Provider = ({children}) => {
     const reducers = {
-        cars: useReducer(carReducer, carInitialState)
+        cars: useReducer(carReducer, carInitialState),
+        auth: useReducer(authReducer, authInitialState)
     }
-
     return (
         <StateContext.Provider value={reducers}>
             {children}
