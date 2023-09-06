@@ -1,0 +1,11 @@
+.Car {
+    margin: 5px 10px;
+    padding: 5px 10px;
+    background-color: lightblue;
+    border: 2px solid grey;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
