@@ -1,0 +1,24 @@
+.Header {
+    background-color: #008CBA;
+    display: flex;
+    font-size: 25px;
+    border-bottom: solid 2px blue;
+}
+
+.links {
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.links a {
+    text-decoration: none;
+    color: snow;
+}
+
+.info {
+    font-size: 18px;
+    color: snow;
+}
+
