@@ -22,3 +22,8 @@
     color: snow;
 }
 
+.info:hover, a:hover {
+    cursor: pointer;
+    text-shadow: red -3px 0, cyan 3px 0;
+}
+

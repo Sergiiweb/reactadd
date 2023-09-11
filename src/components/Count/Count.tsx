@@ -1,10 +1,9 @@
-import {useDispatch} from "react-redux";
-
 import css from "./Count.module.css";
-import {AppDispatch, countActions} from "../../redux";
+import {countActions} from "../../redux";
+import {useAppDispatch} from "../../hooks";
 
 const Count = () => {
-    const dispatch = useDispatch<AppDispatch>();
+    const dispatch = useAppDispatch();
 
     return (
         <div className={css.Count}>
