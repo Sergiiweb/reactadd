@@ -2,7 +2,6 @@ import {useEffect} from "react";
 
 import {useAppDispatch, useAppSelector} from "../../hooks";
 import {Post} from "./Post";
-import {postService} from "../../services";
 import {postActions} from "../../redux";
 
 const Posts = () => {
@@ -10,7 +9,7 @@ const Posts = () => {
     const dispatch = useAppDispatch();
 
     useEffect(() => {
-        postService.getAll().then(({data}) => dispatch(postActions.setAll(data)));
+        dispatch(postActions.getAll());
     }, []);
 
     return (

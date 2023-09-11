@@ -2,7 +2,6 @@ import {useEffect} from "react";
 
 import {useAppDispatch, useAppSelector} from "../../hooks";
 import {User} from "./User";
-import {userService} from "../../services";
 import {userActions} from "../../redux";
 
 const Users = () => {
@@ -10,7 +9,7 @@ const Users = () => {
     const dispatch = useAppDispatch();
 
     useEffect(() => {
-        userService.getAll().then(({data}) => dispatch(userActions.setAll(data)))
+        dispatch(userActions.getAll());
     }, []);
 
     return (
